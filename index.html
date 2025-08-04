@@ -55,6 +55,24 @@
             z-index: 1;
         }
 
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 30px;
+            display: block;
+            object-fit: cover;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.05);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
         .name {
             font-size: 3rem;
             font-weight: 700;
@@ -182,7 +200,7 @@
             color: #555;
         }
 
-        @media (max-width: 768px) {
+                    @media (max-width: 768px) {
             .container {
                 margin: 10px;
                 border-radius: 15px;
@@ -190,6 +208,11 @@
 
             .header {
                 padding: 40px 20px;
+            }
+
+            .profile-picture {
+                width: 120px;
+                height: 120px;
             }
 
             .name {
@@ -255,6 +278,7 @@
 <body>
     <div class="container">
         <header class="header">
+            <img src="./profile.jpg" alt="Faezeh Sarlakifar" class="profile-picture">
             <h1 class="name">Faezeh Sarlakifar</h1>
             <p class="title">Master's Student in Artificial Intelligence | University of Bologna</p>
             
@@ -283,7 +307,7 @@
                 <h2 class="section-title">About</h2>
                 <p class="about-text">
                     Welcome to my professional profile. I'm interested in learning about Deep Learning, especially its applications in Bioinformatics and Health. My journey in AI and Deep Learning is ongoing, and I'm enthusiastic about expanding my knowledge to make meaningful contributions to this field.
-                    Below you can view and download my curriculum vitae.
+                    Below you can view and download my complete curriculum vitae.
                 </p>
             </section>
 
@@ -291,7 +315,7 @@
                 <h2 class="section-title">Curriculum Vitae</h2>
                 
                 <div class="download-section">
-                    <a href="./CV.pdf" class="download-btn" download>
+                    <a href="./cv.pdf" class="download-btn" download>
                         <i class="fas fa-download"></i>
                         Download CV (PDF)
                     </a>
@@ -303,7 +327,7 @@
                         Loading CV...
                     </div>
                     <iframe 
-                        src="./CV.pdf" 
+                        src="./cv.pdf" 
                         class="cv-frame" 
                         id="cv-frame" 
                         style="display: none;"
